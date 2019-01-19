@@ -6,7 +6,7 @@ Created on Thu Jan 10 11:59:48 2019
 """
 import networkx as nx
 import matplotlib.pyplot as plt
-"""import random """
+import random
 import numpy.random
 
 
@@ -30,10 +30,10 @@ while(value < 2000):
 print cost
 try:
     while (G.number_of_edges() < 16):
-        c1 = numpy.random.choice(G.nodes())
-        c2 = numpy.random.choice(G.nodes())
+        c1 = random.choice(list(G.nodes()))
+        c2 = random.choice(list(G.nodes()))
         if c1!=c2 and G.has_edge(c1,c2) == 0:
-            w = numpy.random.choice(cost)
+            w = random.choice(cost)
             G.add_edge(c1,c2,weight=w)
 except IndexError as error:
     print "error"
