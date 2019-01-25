@@ -29,3 +29,13 @@ nx.draw_circular(G)
 plt.show()
 
 draw_dege(G)
+
+print nx.density(G)  # density of network
+
+print nx.clustering(G)  # clustering coefficient dict
+s = 0
+for i in nx.clustering(G).values():
+    s = s + i
+    print i
+print "clustering " + str(s/len(nx.clustering(G)))  # average clustering
+#G.average_clustering(G)
