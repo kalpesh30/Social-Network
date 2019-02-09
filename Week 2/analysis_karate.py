@@ -38,4 +38,4 @@ for i in nx.clustering(G).values():
     s = s + i
     print i
 print "clustering " + str(s/len(nx.clustering(G)))  # average clustering
-#G.average_clustering(G)
+G.average_clustering(G)
