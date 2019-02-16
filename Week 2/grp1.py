@@ -30,9 +30,9 @@ def edges_for_connectedness(n):
 
 def get_avg_no_of_edges_for_connectedness(n):
     sm = 0
-    for i in range(4):
+    for i in range(10):
         sm = sm + edges_for_connectedness(n)
-        return sm/4
+    return sm/4
 
 def plotting_connected_edges_no():
     x = []
